@@ -5,9 +5,9 @@
   "description": "vite plugin for tinymce",
   "main": "index.ts",
   "scripts": {
-    "postinstall": "pnpm build",
-    "build": "tsup",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "demo": "pnpm --filter demo run dev",
+    "prepare": "pnpm build",
+    "build": "tsup"
   },
   "exports": {
     ".": "./lib/index.js"

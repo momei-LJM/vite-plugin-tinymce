@@ -19,7 +19,7 @@ export default function tinymcePlugin(
   let base: string = "/";
   let isBuild: boolean = false;
   return {
-    name: "transform-tinymce",
+    name: "vite-plugin-tinymce",
     config(c, { command }) {
       isBuild = command === "build";
       if (c.base !== undefined) {

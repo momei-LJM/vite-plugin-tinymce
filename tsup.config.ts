@@ -8,7 +8,6 @@ export default defineConfig({
   },
   outDir: "dist",
   format: "esm",
-  noExternal: ["serve-static"],
   splitting: true,
   sourcemap: true,
   clean: true,

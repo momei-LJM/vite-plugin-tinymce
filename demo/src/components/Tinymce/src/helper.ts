@@ -1,6 +1,6 @@
 /* eslint-disable camelcase */
 
-import { RawEditorOptions, Editor, TinyMCE } from "tinymce";
+// import type { RawEditorOptions, Editor, TinyMCE } from "tinymce";
 import {
   Ref,
   computed,
@@ -19,7 +19,10 @@ import { usePluginImage, usePluginVideo } from "./pluginLoader";
 import { PropsType } from "./props";
 
 import resetStyle from "./styles/reset.css?inline";
+import type { Editor, RawEditorOptions, TinyMCE } from "tinymce";
+
 type Nullable<T> = T | null;
+
 interface BlobInfo {
   id: () => string;
   name: () => string;
@@ -236,7 +239,7 @@ export const useHelp = (tinymce: TinyMCE) => {
 
   const loading = ref(false);
 
-  const { props, attrs, emit } = getCurrentInstance()!;
+  const { props, attrs, emit } = getCurrentInstance()! as any;
 
   const skinName = VITE_THEME === "dark" || props.dark ? "oxide-dark" : "oxide";
 
@@ -370,14 +373,14 @@ export const useHelp = (tinymce: TinyMCE) => {
   const bindModelHandlers = (editor: Editor) => {
     watch(
       () => props.modelValue,
-      (val: string, prevVal: string) => {
+      (val, prevVal) => {
         setValue(editor, val, prevVal);
       }
     );
 
     watch(
       () => props.value,
-      (val: string, prevVal: string) => {
+      (val, prevVal) => {
         setValue(editor, val, prevVal);
       },
       {

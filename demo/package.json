@@ -5,18 +5,19 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vue-tsc -b && vite build",
+    "build": "vite build",
     "preview": "vite preview"
   },
   "dependencies": {
-    "vue": "^3.4.31",
-    "tinymce": "^7.2.1"
+    "tinymce": "^7.2.1",
+    "vue": "^3.4.31"
   },
   "devDependencies": {
+    "@types/tinymce": "^4.6.9",
     "@vitejs/plugin-vue": "^5.0.5",
     "typescript": "^5.2.2",
     "vite": "^5.3.4",
-    "vue-tsc": "^2.0.24",
-    "vite-plugin-tinymce": "link:../dist"
+    "vite-plugin-tinymce": "../dist",
+    "vue-tsc": "^2.0.24"
   }
 }

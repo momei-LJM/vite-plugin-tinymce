@@ -1,4 +1,4 @@
-import { defineConfig } from "vite";
+import { defineConfig, Plugin } from "vite";
 import vue from "@vitejs/plugin-vue";
 import tinymcePlugin from "vite-plugin-tinymce";
 

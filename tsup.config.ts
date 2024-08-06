@@ -7,10 +7,9 @@ export default defineConfig({
     entry: "./src/index.ts",
   },
   outDir: "dist",
-  format: ["esm"],
+  format: "esm",
   noExternal: ["serve-static"],
-  splitting: false,
+  splitting: true,
   sourcemap: true,
   clean: true,
-  platform: "node",
 });

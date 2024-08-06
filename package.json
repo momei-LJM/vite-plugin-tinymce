@@ -17,6 +17,10 @@
     "vite-plugin"
   ],
   "author": "momei-LJM",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/momei-LJM/vite-plugin-tinymce"
+  },
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^22.1.0",

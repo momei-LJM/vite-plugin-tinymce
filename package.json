@@ -3,14 +3,22 @@
   "version": "1.0.0",
   "type": "module",
   "description": "vite plugin for tinymce",
-  "main": "index.ts",
+  "main": "./dist/index.js",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "demo": "pnpm --filter demo run dev",
     "prepare": "pnpm build",
     "build": "tsup"
   },
+  "files": [
+    "dist"
+  ],
   "exports": {
-    ".": "./lib/index.js"
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
   },
   "keywords": [
     "vite', 'tinymce",
@@ -19,7 +27,7 @@
   "author": "momei-LJM",
   "repository": {
     "type": "git",
-    "url": "https://github.com/momei-LJM/vite-plugin-tinymce"
+    "url": "git+https://github.com/momei-LJM/vite-plugin-tinymce.git"
   },
   "license": "MIT",
   "devDependencies": {
@@ -30,7 +38,7 @@
     "vite": "^5.3.5"
   },
   "peerDependencies": {
-    "vite": "^5.3.5"
+    "vite": ">= 5.0.0"
   },
   "dependencies": {
     "serve-static": "^1.15.0"
